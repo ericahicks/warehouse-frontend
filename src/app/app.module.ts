@@ -21,6 +21,7 @@ import { InventoryPanelComponent } from './inventory-panel/inventory-panel.compo
 import { AlertsComponent } from './alerts/alerts.component';
 import { InventoryFormComponent } from './inventory-form/inventory-form.component';
 import { ConfirmationRowComponent } from './confirmation-row/confirmation-row.component';
+import { InventoryAddFormComponent } from './inventory-add-form/inventory-add-form.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ConfirmationRowComponent } from './confirmation-row/confirmation-row.co
     InventoryPanelComponent,
     AlertsComponent,
     InventoryFormComponent,
-    ConfirmationRowComponent
+    ConfirmationRowComponent,
+    InventoryAddFormComponent
   ],
   imports: [
     BrowserModule,

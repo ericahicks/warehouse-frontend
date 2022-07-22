@@ -1,0 +1,17 @@
+<td colspan="5">
+    <label for="quantity">Quantity </label>
+    <input type="number" minimum="0"
+        id="quantity" name="quantity" [(ngModel)]="newqty" />
+
+    <label for="product">Product</label>
+    <input type="text" id="product" name="name" size="45" [(ngModel)]="newname" />
+
+    <label for="description">Description</label>
+    <input type="text" id="description" name="description" size="45" [(ngModel)]="newdesc" />
+
+    <span class="btn-group">
+    <button class="bgh-red" (click)="closeAddForm()">&#x2715;</button>
+    <button class="bgh-green" (click)="addNewItem()">&check;</button>
+    </span>
+
+</td>

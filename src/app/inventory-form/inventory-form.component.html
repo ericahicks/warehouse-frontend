@@ -1,13 +1,15 @@
 <td colspan="5">    
     <label for="quantity">Quantity </label>
-    <input type="number" minimum="0" [(ngModel)]="updatedItem.quantity"
+    <input type="number" minimum="0"
         id="quantity" name="quantity" [value]="item?.quantity"/>
 
     <label for="description">Description</label>
-    <input [(ngModel)]="updatedItem.product!.description" type="text" id="description" name="description" size="45" 
-        [value]="item?.product?.description"/>
+    <input type="text" id="description" name="description" size="45" [value]="item?.product?.description" />
     <span class="btn-group">
     <button class="bgh-red" (click)="deselectItem()">&#x2715;</button>
-    <button class="bgh-green">&check;</button>
+    <button class="bgh-green" (click)="makeAlert()">&check;</button>
     </span>
+</td>
+<td colspan="5">
+    <p>Just trying to see what is in the child: </p>
 </td>

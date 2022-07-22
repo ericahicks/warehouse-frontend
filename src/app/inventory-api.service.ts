@@ -21,6 +21,7 @@ export class InventoryApiService {
     return this.http.get(this.baseUrl + "warehouse/1");
   }
 
+  // dummy method for testing only
   getInventory(): Observable<InventorItem[]> {
     const inventory = of(INVENTORY);
     return inventory;
@@ -28,7 +29,8 @@ export class InventoryApiService {
 
   // rxjs 
   save(inventory :InventorItem) {                 // register an error handler
-    return this.http.post(this.baseUrl, inventory).pipe(catchError(this.handleError));
+    console.log("saving " + inventory.product.name);
+    return this.http.post("/inventory/", inventory).pipe(catchError(this.handleError));
   }
 
   delete(inventory? :InventorItem) {               // register an error handler
@@ -37,6 +39,14 @@ export class InventoryApiService {
       return this.http.delete(deleteURL).pipe(catchError(this.handleError));
     } else {
       throw new Error("No inventory item provied to delete call."); // create a stacktrace
+    }
+  }
+
+  update(updatingItem?: InventorItem) : Observable<any>{
+    if (updatingItem) {
+      return this.http.put(this.baseUrl, updatingItem).pipe(catchError(this.handleError));
+    } else {
+      throw new Error("No inventory item provided to update call.");
     }
   }
 

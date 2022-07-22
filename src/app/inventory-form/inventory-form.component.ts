@@ -8,16 +8,16 @@ import { InventorItem } from '../models/inventory-item';
   styleUrls: ['./inventory-form.component.css']
 })
 export class InventoryFormComponent implements OnInit {
-  products = PRODUCTS;
+
   @Input() item?: InventorItem;
   @Output() itemChange = new EventEmitter<InventorItem>;
 
-  @Input() updatedItem = new InventorItem(this.products[0], 0, 0, undefined); // default
-  @Output() updatedItemChange = new EventEmitter<InventorItem>;
+  @Input() updateItem?: InventorItem;
+  @Output() updateItemChange = new EventEmitter<InventorItem>;
 
-  @Output() alertUpdate = new EventEmitter<String>;
-  makeUpdateAlert() {
-    this.alertUpdate.emit();
+  @Output() updateAlert = new EventEmitter<String>;
+  makeAlert() {
+    this.updateAlert.emit();
   }
 
   constructor() { }
@@ -28,6 +28,11 @@ export class InventoryFormComponent implements OnInit {
   deselectItem() {
     this.item = undefined;
     this.itemChange.emit(this.item);
+  }
+
+  dontUpdateItem() {
+    this.updateItem = undefined;
+    this.updateItemChange.emit(this.updateItem);
   }
 
 }
