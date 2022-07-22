@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    height: 80px;
+}
+
+.flex-col {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.text-white {
+    color: white;
+}
+
+#slogan {
+    text-align: center;
+}

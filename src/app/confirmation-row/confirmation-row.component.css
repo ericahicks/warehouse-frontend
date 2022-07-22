@@ -1,0 +1,34 @@
+
+.btn-group {
+    margin-left: 3em;
+    border-radius: 3px;
+}
+
+.btn { 
+    background-color: rgb(17, 84, 158);
+    color: white;
+    padding: 3px 9px;
+}
+
+.bgh-green {
+    border: none;
+}
+
+.bgh-green:hover {
+    background-color: rgb(37, 167, 77);
+}
+
+.bgh-red {
+    border: none;
+}
+
+.bgh-red:hover {
+    font-weight: bold;
+    background-color: rgba(207, 63, 85, 0.726)
+}
+
+td {
+    text-align: center;
+    background-color: rgb(230,230,230);
+    height: 2em;
+}

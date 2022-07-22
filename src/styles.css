@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+.my-green {
+    color: rgb(37, 167, 77);
+}
+
+.my-blue {
+    color: rgb(17, 84, 158);
+}
+
+.bg-green {
+    background-color:  rgb(37, 167, 77);
+}
+
+.bg-blue {
+ background-color:  rgb(17, 84, 158);   
+}
+
+:root {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}

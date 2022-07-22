@@ -1,0 +1,54 @@
+input[type=number] {
+    width: 4em;
+    margin-right: 2em;
+    margin-left: 0.5em;
+}
+
+input[type="text"] {
+    margin-left: 2em;
+
+}
+
+input {
+    border: none;
+    border-radius: 3px;
+
+}
+
+
+.btn-group {
+    margin-left: 3em;
+    padding-bottom: 10px;
+}
+
+
+.bgh-green {
+    border: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.bgh-green:hover {
+    background-color: rgb(37, 167, 77);
+}
+
+.bgh-red {
+    border: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.bgh-red:hover {
+    font-weight: bold;
+    background-color: rgba(225,25,77,1)
+}
+
+td {
+    background-color: rgb(107, 166, 230);
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+label {
+    margin-left: 0.5em;
+    font-weight: bold;
+}

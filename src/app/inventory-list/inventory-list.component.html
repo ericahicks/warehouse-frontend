@@ -1,1 +1,25 @@
-<p>inventory-list works!</p>
+<h2 class="center">Warehouse Inventory</h2>
+<div class="box">
+<table class="item">
+<tr>
+<th><button class="bgh-green">&#x002B;</button></th>
+<th>Quantity</th>
+<th>Product</th>
+<th>Description</th>
+<th></th>
+</tr>
+<ng-container *ngFor="let item of items">
+<tr>
+    <td><button class="bg-none" (click)="selectForDelete(item)">&#x2715;</button></td>
+    <td>{{item.quantity}}</td>
+    <td>{{item.product!.name}}</td>
+    <td>{{item.product!.description}}</td>
+    <td><button class="btn-blue" (click)="onSelect(item)">Edit</button></td>
+</tr>
+<tr app-inventory-form  [(updatedItem)]="stagedItem" (updatedItem)="stagedItem" [(item)]="selectedItem" *ngIf="item == selectedItem">
+</tr>
+<tr app-confirmation-row  (deleteAlert)="doDelete()" [(item)]="deletingItem" *ngIf="item == deletingItem">
+</tr>
+</ng-container>
+</table>
+</div>
